@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
+
+:root {
+  --font-family: "Open Sans", sans-serif;
+  --darkest-color: #3a1078;
+  --darker-color: #4e31aa;
+  --dark-color: #655dbb;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --light-text-color: #333;
+  --decoration-color:#911F27;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+  text-decoration: none;
+  list-style-type: none;
+}
+html {
+  font-size: 62.5%;
+}
+section {
+  padding: 2rem 5%;
+}
+
+/* !Some Basic Styling  */
+.btn{
+    padding: .5rem 1rem;
+    border: none;
+    outline: none;
+    background-color:var(--decoration-color);
+    color: var(--white-color);
+    border: 1px solid white;
+    cursor: pointer;
+    border-radius: .5rem;
+    transition:all .4s linear;
+}
+.btn:hover{
+    background-color: var(--white-color);
+    color: var(--decoration-color);
+    border: 1px solid var(--decoration-color);
+}
+
+/* !Section Navbar Designing */
+
+.NavigationBar {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1rem 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--darkest-color);
+}
+.NavigationBar .logo a {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  line-height: 1.1;
+}
+.NavigationBar .logo a span{
+    font-size: 2rem;
+    color:var(--white-color) ;
+}
+.NavigationBar .logo a img {
+  width: 5rem;
+  display: block;
+
+  border-radius: 50%;
+}
+.NavigationBar nav{
+    flex: 0.5;
+}
+
+.NavigationBar nav .mainNav{
+
+    display: flex;
+    justify-content: space-between;
+}
+.NavigationBar nav ul li{
+    padding: 1rem;
+}
+.NavigationBar nav ul li a{
+    font-size: 2rem;
+    color: var(--white-color);
+}
+
+.NavigationBar .registerBtn{
+    padding: .5rem 1rem;
+}
+li.active{
+   position: relative;
+}
+li.active:hover .subNav{
+    display: block;
+}
+.NavigationBar nav li  .subNav{
+    display: none;
+    position: absolute;
+    background-color: var(--darkest-color);
+    top: 100%;
+    left: 0;
+    width: 15rem;
+     padding: 1rem;
+     display: none;
+     
+  
+}
+.NavigationBar nav li  .subNav li{
+   
+    margin-top: 1rem;
+    padding: 1rem;
+    text-align: center;
+ 
+}
+.NavigationBar nav li  .subNav li a{
+    font-size: 1.6rem;
+}
+
+.NavigationBar nav li:hover{
+    background-color: var(--darker-color);
+    border-radius: 1rem;
+
+}
